@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark " aria-label="Third navbar example">
+<nav id="navbar_top" class="navbar navbar-expand-sm navbar-dark " aria-label="Third navbar example">
     <div class="container ">
-        <a class="navbar-brand" href="{{ path('homepage') }}"> <img src="{{ asset('assets/img/logo.jpg') }}" alt="logo" width="50px"></a>
+        <a class="navbar-brand" href="{{ path('homepage') }}"> <img src="{{ asset('assets/img/logo.jpg') }}" alt="logo" width="100px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,24 +10,37 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ path('homepage') }}">Accueil</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Coiffure</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                        <li><a class="dropdown-item" href="#">Nos réalisations</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nos produits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Actualités</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="false">Disabled</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <a class="nav-link" href="#">Réserver un rendez-vous</a>
                 </li>
             </ul>
-            <form>
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0" >
+                <li class="nav-item">
+                    <a class="nav-link" href="/{{ app.user ? 'logout' : "login" }}">{{ app.user ? "Déconnexion" : "Connexion"  }}</a>
+                    {% if not app.user %}
+                    <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
+                    {% endif %}
+
+                </li>
+
+                <li class="nav-item">
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
