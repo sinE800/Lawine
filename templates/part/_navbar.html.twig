@@ -1,46 +1,93 @@
-<nav id="navbar_top" class="navbar navbar-expand-sm navbar-dark " aria-label="Third navbar example">
-    <div class="container ">
-        <a class="navbar-brand" href="{{ path('homepage') }}"> <img src="{{ asset('assets/img/logo.jpg') }}" alt="logo" width="100px"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+{# <nav id="navbar_top" class="navbar navbar-expand-sm navbar-dark " aria-label="Third navbar example"> #}
+{#    <div class="container "> #}
+{#        <a class="navbar-brand" href="{{ path('homepage') }}"> <img src="{{ asset('assets/img/logo.jpg') }}" alt="logo" width="100px"></a> #}
+{#        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation"> #}
+{#            <span class="navbar-toggler-icon"></span> #}
+{#        </button> #}
 
-        <div class="collapse navbar-collapse " id="navbarsExample03">
-            <ul class="navbar-nav me-auto mb-2 mb-sm-0 ">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ path('homepage') }}">Accueil</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Coiffure</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                        <li><a class="dropdown-item" href="#">Nos réalisations</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nos produits</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Actualités</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Réserver un rendez-vous</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav me-auto mb-2 mb-sm-0" >
-                <li class="nav-item">
-                    <a class="nav-link" href="/{{ app.user ? 'logout' : "login" }}">{{ app.user ? "Déconnexion" : "Connexion"  }}</a>
-                    {% if not app.user %}
-                    <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
-                    {% endif %}
+{#        <div class="collapse navbar-collapse " id="navbarsExample03"> #}
+{#            <ul class="navbar-nav me-auto mb-2 mb-sm-0 "> #}
+{#                <li class="nav-item"> #}
+{#                    <a class="nav-link active" aria-current="page" href="{{ path('homepage') }}">Accueil</a> #}
+{#                </li> #}
+{#                <li class="nav-item dropdown"> #}
+{#                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Coiffure</a> #}
+{#                    <ul class="dropdown-menu" aria-labelledby="dropdown03"> #}
+{#                        <li><a class="dropdown-item" href="#">Nos réalisations</a></li> #}
+{#                    </ul> #}
+{#                </li> #}
+{#                <li class="nav-item"> #}
+{#                    <a class="nav-link" href="#">Nos produits</a> #}
+{#                </li> #}
+{#                <li class="nav-item"> #}
+{#                    <a class="nav-link" href="#">Actualités</a> #}
+{#                </li> #}
+{#                <li class="nav-item"> #}
+{#                    <a class="nav-link" href="#">Contact</a> #}
+{#                </li> #}
+{#                <li class="nav-item bn632-hover bn22"> #}
+{#                    <a class="nav-link " href="#">Réserver un rendez-vous</a> #}
+{#                </li> #}
+{#            </ul> #}
+{#            <ul class="navbar-nav me-auto mb-2 mb-sm-0" > #}
+{#                <li class="nav-item"> #}
+{#                    <a class="nav-link" href="/{{ app.user ? 'logout' : "login" }}">{{ app.user ? "Déconnexion" : "Connexion"  }}</a> #}
+{#                    {% if not app.user %} #}
+{#                    <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a> #}
+{#                    {% endif %} #}
 
-                </li>
+{#                </li> #}
 
-                <li class="nav-item">
-                </li>
-            </ul>
+{#                <li class="nav-item"> #}
+{#                </li> #}
+{#            </ul> #}
+{#        </div> #}
+{#    </div> #}
+{# </nav> #}
+<nav id="navbar_top" class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <a href="{{ path('homepage') }}" class="navbar-brand"><i class="fa fa-scissors"></i>Lawine<b>Coiffure</b></a>
+    {#    <a class="navbar-brand" href="{{ path('homepage') }}">  <img src="{{ asset('assets/img/logo.jpg') }}" alt="logo" width="100px"></a> #}
+
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+
+        <div class="navbar-nav ml-auto">
+            <a href="{{ path('homepage') }}" class="nav-item nav-link nav-tabs active "><i class="fa fa-home"></i><span>Accueil</span></a>
+            <a href="{{ path('coiffures') }}" class="nav-item nav-link"><i class="fa-solid fa-scissors"></i><span>Coiffures</span></a>
+            <a href="{{ path('produits') }}" class="nav-item nav-link"><i class="fa-solid fa-spray-can-sparkles"></i><span>Nos produits</span></a>
+            <a href="{{ path('actualites') }}" class="nav-item nav-link"><i class="fa-regular fa-newspaper"></i><span>Actualités</span></a>
+            <a href="{{ path('contact') }}" class="nav-item nav-link"><i class="fa-regular fa-message"></i><span>Contactez-nous</span></a>
         </div>
+
+        {% if app.user %}
+
+        <div class="navbar-nav ml-auto dropdown">
+            <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="{{ asset('assets/img/logo.jpg') }} " alt="Image de profil"> {{ app.user.email }}<b class="caret"></b></a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
+                <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i>Prendre RDV</a>
+                <a href="#" class="dropdown-item"><i class="fa-regular fa-bell"></i><span>Notifications</span></a>
+                <a href="#" class="dropdown-item"><i class="fa-regular fa-envelope"></i><span>Messages</span></a>
+                <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Paramètres</a>
+                <div class="divider dropdown-divider"></div>
+                <a href="{{ path('app_logout') }}" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Se déconnecter</a>
+            </div>
+        </div>
+        {% endif %}
+        {% if not app.user %}
+            <div class="navbar-nav ml-auto">
+
+
+                <a class="nav-item nav-link"
+                   href="/{{ app.user ? 'logout' : "login" }}"><i class="fa-regular fa-user"></i>Connexion</a>
+                {% if not app.user %}
+                    <a class="nav-item nav-link" href="{{ path('app_register') }}"><i class="fa fa-lock"></i>S'inscrire</a>
+                {% endif %}
+
+            </div>
+        {% endif %}
     </div>
 </nav>
