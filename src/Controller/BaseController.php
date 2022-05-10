@@ -44,4 +44,46 @@ class BaseController extends AbstractController
             'controller_name' => 'BaseController',
         ]);
     }
+    #[Route('/admin', name: 'admin')]
+    public function admin(): Response
+    {
+        return $this->render('admin/dashboard/admin.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
+    #[Route('/profile', name: 'profile')]
+    public function profile(): Response
+    {
+        return $this->render('user/profile.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
+    #[Route('/réservation', name: 'reservation')]
+    public function reservation(): Response
+    {
+        return $this->render('user/reservation.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
+    #[Route('/notifications', name: 'notifications')]
+    public function notifications(): Response
+    {
+        return $this->render('user/profile.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
+    #[Route('/messages', name: 'messages')]
+    public function messages(): Response
+    {
+        return $this->render('user/profile.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
+    #[Route('/paramètres', name: 'parametres')]
+    public function parametres(): Response
+    {
+        return $this->render('user/parametres.html.twig', [
+            'controller_name' => 'BaseController',
+        ]);
+    }
 }

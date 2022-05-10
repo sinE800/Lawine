@@ -18,6 +18,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'integer')]
     private $id;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $name;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $firstname;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $sexe;
+
+    #[ORM\Column(type: 'date')]
+    private $DateOfBirth;
+
     #[ORM\Column(type: 'string', length: 180, unique: true)]
     private ?string $email;
 
@@ -26,6 +38,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: 'string')]
     private string $password;
+
+    #[ORM\Column(type: 'datetime_immutable')]
+    private $CreatedAt;
 
     public function getId(): ?int
     {
@@ -95,5 +110,65 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getSexe(): ?string
+    {
+        return $this->sexe;
+    }
+
+    public function setSexe(string $sexe): self
+    {
+        $this->sexe = $sexe;
+
+        return $this;
+    }
+
+    public function getDateOfBirth(): ?\DateTimeInterface
+    {
+        return $this->DateOfBirth;
+    }
+
+    public function setDateOfBirth(\DateTimeInterface $DateOfBirth): self
+    {
+        $this->DateOfBirth = $DateOfBirth;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->CreatedAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $CreatedAt): self
+    {
+        $this->CreatedAt = $CreatedAt;
+
+        return $this;
     }
 }

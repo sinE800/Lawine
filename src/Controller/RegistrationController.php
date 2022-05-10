@@ -15,6 +15,9 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 
 class RegistrationController extends AbstractController
 {
+    /**
+     * @throws \Exception
+     */
     #[Route('/register', name: 'app_register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, UserAuthenticator $authenticator, EntityManagerInterface $entityManager): Response
     {
@@ -30,6 +33,8 @@ class RegistrationController extends AbstractController
                     $form->get('password')->getData()
                 )
             );
+            $user->setCreatedAt(new \DateTimeImmutable('now',new \DateTimeZone('+2') ));
+            $user->setRoles((array)"ROLE_USER");
 
             $entityManager->persist($user);
             $entityManager->flush();
