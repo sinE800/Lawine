@@ -1,2 +1,126 @@
 {% extends 'base.html.twig' %}
 
+{% block body %}
+    {% if not app.user %}
+        <form method="post">
+            <section class="vh-100 bg-image"
+                     style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+                <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+                    <div class="container h-100">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                                <div class="card" style="border-radius: 15px;">
+                                    <div class="card-body p-5" >
+                                        <h1 class=" text-center mb-5">Contactez-nous</h1>
+
+                                        <label for="name">Nom</label>
+                                        <input placeholder="Nom" type="text"
+                                               name="name" id="name"
+                                               class="form-control" autocomplete="family-name" required autofocus>
+                                        <label for="firstname">Prénom</label>
+                                        <input placeholder="Prénom" type="text"
+                                               name="firstname" id="firstname"
+                                               class="form-control" autocomplete="given-name" required autofocus>
+                                        <label for="inputEmail">Adresse mail</label>
+                                        <input placeholder="Adresse mail" type="email"
+                                               name="email" id="inputEmail"
+                                               class="form-control" autocomplete="email" required autofocus>
+                                        <label for="message">Message</label>
+                                        <textarea rows="5" cols="33" style="max-height: 150px" placeholder="Ecrivez votre message ici."
+                                               name="message" id="message"
+                                                  class="form-control" required autofocus></textarea>
+                                        <div style="text-align: center; margin-top: 10px;">
+                                            <button class="btn btn-lg btn-primary"  type="submit">
+                                                Envoyer le message
+                                            </button>
+                                        </div>
+
+
+                                        <input type="hidden" name="_csrf_token"
+                                               value="{{ csrf_token('authenticate') }}"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {#
+            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+            See https://symfony.com/doc/current/security/remember_me.html
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+            #}
+
+
+        </form>
+        {% else %}
+            <form method="post">
+                <section class="vh-100 bg-image"
+                         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+                    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+                        <div class="container h-100">
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                                    <div class="card" style="border-radius: 15px;">
+                                        <div class="card-body p-5" >
+                                            <h1 class=" text-center mb-5">Contactez-nous</h1>
+
+                                            <label for="name">Nom</label>
+                                            <input placeholder="Nom" type="text"
+                                                   name="name" id="name"
+                                                   class="form-control" autocomplete="family-name" required autofocus value="{{ app.user.name }}" disabled>
+                                            <label for="firstname">Prénom</label>
+                                            <input placeholder="Prénom" type="text"
+                                                   name="firstname" id="firstname"
+                                                   class="form-control" autocomplete="given-name" required autofocus value="{{ app.user.firstname }}" disabled>
+                                            <label for="inputEmail">Adresse mail</label>
+                                            <input placeholder="Adresse mail" type="email"
+                                                   name="email" id="inputEmail"
+                                                   class="form-control" autocomplete="email" required autofocus value="{{ app.user.email }}" disabled>
+                                            <label for="message">Message</label>
+                                            <textarea rows="5" cols="33" style="max-height: 150px" placeholder="Ecrivez votre message ici."
+                                                      name="message" id="message"
+                                                      class="form-control" required autofocus></textarea>
+                                            <div style="text-align: center; margin-top: 10px;">
+                                                <button class="btn btn-lg btn-primary"  type="submit">
+                                                    Envoyer le message
+                                                </button>
+                                            </div>
+
+
+                                            <input type="hidden" name="_csrf_token"
+                                                   value="{{ csrf_token('authenticate') }}"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+                #}
+
+
+            </form>
+
+
+    {% endif %}
+
+{% endblock %}

@@ -1,24 +1,4 @@
-// $(document).ready(function(){
-//     $('a').click(function() {
-//         $("a.active").removeClass("nav-tabs active ");
-//         $(this).addClass('nav-tabs active ');
-//     })})
-
-// $(function() {
-//
-//     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-//         localStorage.setItem('lastTab', $(this).attr('href'));
-//     });
-//     const lastTab = localStorage.getItem('lastTab');
-//
-//     if (lastTab) {
-//         $('[href="' + lastTab + '"]').tab('show');
-//     }
-// });
-
-
-activaTab('bbb');
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener('scroll', function () {
             let navbar_height;
             if (window.scrollY > 50) {

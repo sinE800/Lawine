@@ -1,17 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    Votre nom est : {{ app.user.name }}
-    <br>
-    Votre prénom est : {{ app.user.firstname }}
-    <br>
-    Votre sexe est : {{ app.user.sexe }}
-    <br>
-    {% if "ROLE_ADMIN" in app.user.roles %}
-        Vous êtes un administrateur.
-    {% endif %}
-    {% if "ROLE_USER" in app.user.roles %}
-        Vous êtes un utilisateur.
-    {% endif %}
+    <div>
+        Nom : {{ app.user.name }}
+        <br>
+        Prénom : {{ app.user.firstname }}
+        <br>
+        Sexe : {{ app.user.sexe }}
+        <br>
+        {% if "ROLE_ADMIN" in app.user.roles %}
+            Vous êtes un administrateur.
+
+        {% endif %}
+
+    </div>
+
 {#    Votre date de naissance est : {{ app.user.dateOfBirth }}#}
 {#    Date de création du compte : {{ app.user.createdAt }}#}
 {% endblock %}

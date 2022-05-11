@@ -45,14 +45,15 @@
 {#    </div> #}
 {# </nav> #}
 <nav id="navbar_top" class="navbar navbar-expand-xl navbar-dark bg-dark">
-    <a href="{{ path('homepage') }}" class="navbar-brand"><i class="fa fa-scissors"></i>Lawine<b>Coiffure</b></a>
+    <a href="{{ path('homepage') }}" class="navbar-brand"><img style="width: 12vh; height: 6vh" src="{{ asset('assets/img/test-removebg-preview.png') }}">
+    </a>
     {#    <a class="navbar-brand" href="{{ path('homepage') }}">  <img src="{{ asset('assets/img/logo.jpg') }}" alt="logo" width="100px"></a> #}
 
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Collection of nav links, forms, and other content for toggling -->
-    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+    <div id="navbarCollapse" class="collapse navbar-collapse school-options-dropdown text-center">
 
         <div class="navbar-nav ml-auto nav-tabs ">
             <a  href="{{ path('homepage') }}" class="nav-item nav-link "><i class="fa fa-home"></i><span>Accueil</span></a>
@@ -64,9 +65,9 @@
 
         {% if app.user %}
 
-        <div class="navbar-nav ml-auto dropdown">
+        <div class="navbar-nav ml-auto dropdown " >
             <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="{{ asset('assets/img/logo.jpg') }} " alt="Image de profil"> {{ app.user.email }}<b class="caret"></b></a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu " >
                 <a href="{{ path('profile') }}" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
                 {% if 'ROLE_ADMIN' in app.user.roles %}
                 <a href="{{ path('admin') }}" class="dropdown-item"><i class="fa fa-user-o"></i>Dashboard administrateur</a>

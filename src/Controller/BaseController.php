@@ -44,13 +44,6 @@ class BaseController extends AbstractController
             'controller_name' => 'BaseController',
         ]);
     }
-    #[Route('/admin', name: 'admin')]
-    public function admin(): Response
-    {
-        return $this->render('admin/dashboard/admin.html.twig', [
-            'controller_name' => 'BaseController',
-        ]);
-    }
     #[Route('/profile', name: 'profile')]
     public function profile(): Response
     {
@@ -68,14 +61,14 @@ class BaseController extends AbstractController
     #[Route('/notifications', name: 'notifications')]
     public function notifications(): Response
     {
-        return $this->render('user/profile.html.twig', [
+        return $this->render('user/notifications.html.twig', [
             'controller_name' => 'BaseController',
         ]);
     }
     #[Route('/messages', name: 'messages')]
     public function messages(): Response
     {
-        return $this->render('user/profile.html.twig', [
+        return $this->render('user/messages.html.twig', [
             'controller_name' => 'BaseController',
         ]);
     }

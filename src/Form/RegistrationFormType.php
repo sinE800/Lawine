@@ -36,10 +36,14 @@ class RegistrationFormType extends AbstractType
                     'Femme' => 'Femme',
                     'Autres' => 'Autres',
                 ],
-                'placeholder' => 'Choisissez une option'
+                'placeholder' => 'Choisissez une option',
+                'attr' => [ 'class' =>'form-control']
             ])
             ->add('dateOfBirth', BirthdayType::class,[
-                'attr' => [ 'placeholder' => 'Date de naissance'],
+                'attr' => [ 'placeholder' => 'Date de naissance', 'class' =>'form-control'],
+                'widget' => 'single_text',
+
+
             ])
 
             ->add('email', EmailType::class,[

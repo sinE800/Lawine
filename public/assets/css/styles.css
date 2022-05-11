@@ -1,7 +1,4 @@
 
-.navbar{
-    background-color: #0F3947;
-}
 .gradient-custom-3 {
     /* fallback for old browsers */
     background: #84fab0;
@@ -61,21 +58,23 @@
 /*    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);*/
 /*}*/
 
-body {
-    background: #eeeeee;
-    font-family: 'Varela Round', sans-serif;
+* {
+
+    font-family: 'Oleo Script Swash Caps', cursive;
+
+
 }
 
 .navbar {
     color: #fff;
-    background: #926dde !important;
+    background-color: #0F3947;
+
     padding: 5px 16px;
     border-radius: 0;
     border: none;
     box-shadow: 0 0 4px rgba(0,0,0,.1);
 }
 .navbar img {
-    border-radius: 50%;
     width: 36px;
     height: 36px;
     margin-right: 10px;
@@ -204,6 +203,10 @@ body {
         width: 350px;
         margin-left: 30px;
     }
+    .carousel-item > img {
+        height: 90vh
+    }
+
 }
 @media (max-width: 1199px){
     .navbar .navbar-nav > a > i {
@@ -232,28 +235,5 @@ body {
     }
     .input-group {
         width: 100%;
-    }
-}
-@keyframes bn13bouncy {
-    0% {
-        top: 0;
-    }
-    40% {
-        top: 0;
-    }
-    43% {
-        top: -1em;
-    }
-    46% {
-        top: 0;
-    }
-    48% {
-        top: -0.5em;
-    }
-    50% {
-        top: 0;
-    }
-    100% {
-        top: 0;
     }
 }
