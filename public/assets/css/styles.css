@@ -60,9 +60,21 @@
 
 * {
 
-    font-family: 'Oleo Script Swash Caps', cursive;
 
 
+
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
 .navbar {
@@ -73,6 +85,8 @@
     border-radius: 0;
     border: none;
     box-shadow: 0 0 4px rgba(0,0,0,.1);
+
+
 }
 .navbar img {
     width: 36px;

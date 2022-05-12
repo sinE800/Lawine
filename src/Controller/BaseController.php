@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,10 +32,10 @@ class BaseController extends AbstractController
         ]);
     }
     #[Route('/actualites', name: 'actualites')]
-    public function actualites(): Response
+    public function articles(ArticleRepository $articleRepo): Response
     {
         return $this->render('pages/actualites.html.twig', [
-            'controller_name' => 'BaseController',
+            'articles' => $articleRepo->findAll()
         ]);
     }
     #[Route('/contact', name: 'contact')]

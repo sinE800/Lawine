@@ -66,7 +66,7 @@
         {% if app.user %}
 
         <div class="navbar-nav ml-auto dropdown " >
-            <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="{{ asset('assets/img/logo.jpg') }} " alt="Image de profil"> {{ app.user.email }}<b class="caret"></b></a>
+            <a href="#" data-toggle="dropdown" style="font-family: 'Varela Round', sans-serif;" class="nav-item nav-link dropdown-toggle user-action"><img src="{{ asset('assets/img/logo.jpg') }} " alt="Image de profil"> {{ app.user.email }}<b class="caret"></b></a>
             <div class="dropdown-menu " >
                 <a href="{{ path('profile') }}" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
                 {% if 'ROLE_ADMIN' in app.user.roles %}
