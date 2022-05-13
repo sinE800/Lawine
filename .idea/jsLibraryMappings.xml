@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{5159b68198, jquery, jquery-1.10.2, jquery-3.5.1, jquery-ui, popper.js}" />
+    <file url="PROJECT" libraries="{5159b68198, font-awesome, jquery, jquery-1.10.2, jquery-3.5.1, jquery-ui, popper.js}" />
   </component>
 </project>
