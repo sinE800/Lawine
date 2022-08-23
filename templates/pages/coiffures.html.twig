@@ -1,1 +1,23 @@
 {% extends 'base.html.twig' %}
+{% block body %}
+    <style>
+        body{
+            background: url("http://6emesens-coiffure.fr/wp-content/uploads/revslider/landing-top/landing-top-background-img.jpg");
+            color: white;
+
+        ;
+        }
+    </style>
+    <br>
+    <main style="text-align: center">
+        <h1>Réalisations</h1>
+        <br>
+        <div class="real" >
+            <img src="{{ asset('assets/img/galerie/2022-07-30 (11).jpg') }}" width="33%"  alt="Photo coiffure 1">
+            <img src="{{ asset('assets/img/galerie/2022-07-30 (5).jpg') }}" width="33%" alt="Photo coiffure 2">
+            <img src="{{ asset('assets/img/galerie/2022-07-30 (2).jpg') }}" width="33%" alt="Photo coiffure 3">
+            <img src="{{ asset('assets/img/galerie/2022-07-30 (3).jpg') }}" width="33%" alt="Photo coiffure 4">
+            <img src="{{ asset('assets/img/galerie/2022-07-30 (9).jpg') }}" width="33%"   alt="Photo coiffure 5">
+        </div>
+    </main>
+{% endblock %}

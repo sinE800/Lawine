@@ -3,12 +3,18 @@
 
 {% block body %}
 
-
+<style>
+    body{
+        background: url("http://6emesens-coiffure.fr/wp-content/uploads/revslider/landing-top/landing-top-background-img.jpg");
+        color: white;
+    ;
+    }
+</style>
 <main class="container">
     <div class="row">
 
         <div class="col-md-8">
-            <h3 class="pb-4 mb-4 fst-italic border-bottom"> Articles récents</h3>
+            <h3 class="pb-4 mb-4 fst-italic border-bottom"> Actualités récentes</h3>
             <div id="article-list">
                 {% include 'article/list.html.twig' with { articles } %}
             </div>

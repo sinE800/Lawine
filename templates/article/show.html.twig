@@ -3,27 +3,35 @@
 
 {% block title %} Actualités - {{ article.title }} {% endblock %}
 {% block body %}
+    <style>
+        body{
+            background: url("http://6emesens-coiffure.fr/wp-content/uploads/revslider/landing-top/landing-top-background-img.jpg");
+            color: white;
+        ;
+        }
+    </style>
     <div class="container">
         <h1>{{ article.title }}</h1>
         <hr>
 
         {{ article.content|raw }}
-        {% if article.comments|length == 0 %}
-        <h2 class="comment-title mt-5">
-            <span id="comment-count">
-                {{ article.comments|length }} commentaire
-            </span>
-        </h2>
-            {% else %}
-                <h2 class="comment-title mt-5">
-            <span id="comment-count">
-                {{ article.comments|length }} commentaires
-            </span>
-                </h2>
-        {% endif %}
         <hr>
-        <div class="comment-area mb-5">
-            {{ form(commentForm, {'attr': { 'class': 'comment-form'}}) }}
-        </div>
+{#        {% if article.comments|length == 0 %}#}
+{#        <h2 class="comment-title mt-5">#}
+{#            <span id="comment-count">#}
+{#                {{ article.comments|length }} commentaire#}
+{#            </span>#}
+{#        </h2>#}
+{#            {% else %}#}
+{#                <h2 class="comment-title mt-5">#}
+{#            <span id="comment-count">#}
+{#                {{ article.comments|length }} commentaires#}
+{#            </span>#}
+{#                </h2>#}
+{#        {% endif %}#}
+{#        <hr>#}
+{#        <div class="comment-area mb-5">#}
+{#            {{ form(commentForm, {'attr': { 'class': 'comment-form'}}) }}#}
+{#        </div>#}
     </div>
 {% endblock %}

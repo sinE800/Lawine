@@ -1,129 +1,141 @@
 <!-- Footer -->
-<footer class="bg-dark text-center text-white">
+<style>
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:40%;
+        position:relative;
+        height:0;
+    }
+
+    .map-responsive iframe{
+
+        left:0;
+
+        top:0;
+
+        height:100%;
+
+        width:100%;
+
+        position:absolute;
+
+    }
+
+</style>
+<footer class="bg-dark text-center text-white" style="min-height: auto">
     <!-- Grid container -->
-    <div class="container p-4">
+    <div class="container p-1" >
         <!-- Section: Social media -->
-        <section class="mb-4">
-            <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="bi bi-facebook"></i>
+        <br>
+        <h4>SUIVEZ NOUS SUR LES RESEAUX</h4>
+        <section class="mb-4" >
+            <div class="container p-1 " style="display: flex; justify-content: center; margin: 40px 0">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/people/Salon-Lawine-Strasbourg/100077558231146/" target="_blank" role="button">
+                    <i class="bi bi-facebook"></i>
                 </a>
+                <br>
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/lawine.coiffure/" target="_blank" role="button">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+            </div>
 
             <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i class="bi bi-twitter"></i>
-                </a>
+            {#            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">#}
+            {#            <i class="bi bi-twitter"></i>#}
+            {#                </a>#}
 
             <!-- Google -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                <i class="bi bi-google"></i>
-                </a>
+{#            <a class="btn btn-outline-light btn-floating m-1" href="https://www.google.com/maps/place/Lawine+Coiffure/@48.5769494,7.7531403,15z/data=!4m2!3m1!1s0x0:0x51abbaa4f141f334?sa=X&ved=2ahUKEwiu8camjMf5AhUtx4UKHayuAEkQ_BJ6BAhXEAU"  target="_blank" role="button">#}
+{#                <i class="bi bi-google"></i>#}
+{#                </a>#}
 
-            <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                <i class="bi bi-instagram"></i>
-                </a>
 
             <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-                <i class="bi bi-linkedin"></i>
-                </a>
+{#            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">#}
+{#                <i class="bi bi-linkedin"></i>#}
+{#                </a>#}
         </section>
         <!-- Section: Social media -->
 
 
+        <br>
 
         <!-- Section: Boutton -->
-        <section class="mb-5">
-            <button  class="btn bg-primary">
-                Prendre un rendez-vous
+        <section class=" mb-5">
+            <button  class="btn bg-primary ">
+                PRENDRE UN RENDEZ-VOUS
             </button>
         </section>
+
+
         <!-- Section: Text -->
 
+        <!-- Section: Map -->
+        <div class="map-responsive">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.6800248692434!2d7.74983581700042!3d48.5776769542593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c90462692a75%3A0x51abbaa4f141f334!2sLawine%20Coiffure!5e0!3m2!1sfr!2sfr!4v1660504254405!5m2!1sfr!2sfr"
+                width="1000"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+        <br>
         <!-- Section: Links -->
         <section class="">
             <!--Grid row-->
             <div class="row">
                 <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">ADRESSE</h5>
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#!" class="text-white">Link 1</a>
+                            <a href="https://www.google.com/maps/place/Lawine+Coiffure/@48.5769494,7.7531403,15z/data=!4m2!3m1!1s0x0:0x51abbaa4f141f334?sa=X&ved=2ahUKEwiu8camjMf5AhUtx4UKHayuAEkQ_BJ6BAhXEAU" target="_blank" class="text-white">2 Rue Sédillot 67000 Strasbourg</a>
                         </li>
+
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">HORAIRES</h5>
+
+                    <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
+                            lun.:	Fermé
+                            <br>
+                            mar.:	09:00 – 19:00
+                            <br>
+                            mer.:	09:00 – 19:00
+                            <br>
+                            jeu. :	09:00 – 19:00
+                            <br>
+                            ven.:	09:00 – 19:00
+                            <br>
+                            sam.:	09:00 – 19:00
+                            <br>
+                            dim.:	Fermé
                         </li>
                     </ul>
                 </div>
                 <!--Grid column-->
-
+<br>
                 <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">CONTACT</h5>
 
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
+                            <a href="{{ path('contact') }}" class="text-white">Contactez-nous</a>
+                            <br>
+                            Téléphone: 03 88 24 56 56
 
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-white">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-white">Link 4</a>
                         </li>
                     </ul>
                 </div>
@@ -138,7 +150,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2022 Copyright:
-        <a class="text-white" href="#">Enis Cig</a>
+        <a class="text-white" href="#">Lawine Coiffure</a>
     </div>
     <!-- Copyright -->
 </footer>

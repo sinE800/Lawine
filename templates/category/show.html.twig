@@ -3,12 +3,19 @@
 {% block title %}{{ category.name }}{% endblock %}
 
 {% block body %}
+    <style>
+        body{
+            background: url("http://6emesens-coiffure.fr/wp-content/uploads/revslider/landing-top/landing-top-background-img.jpg");
+            color: white;
+        ;
+        }
+    </style>
     <main class="container">
         <div class="row g-5">
             <div class="col">
                 <h3 class="pb-4 mb-4 fst-italic border-bottom">{{ category.name }}</h3>
                 <div id="article-list">
-                    {% include 'article/list.html.twig' with { articles : category.articles, leftCol: 4, rightCol: 8}  %}
+                    {% include 'article/list.html.twig' with { articles : category.articles, leftCol: 1, rightCol: 8}  %}
                 </div>
             </div>
         </div>

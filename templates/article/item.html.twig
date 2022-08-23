@@ -2,7 +2,7 @@
 {% set article_show = path('article_show', {'slug': article.slug }) %}
 <article class="mb-5">
     <div class="row">
-        <div class="col-md-{{ leftCol ?? 5}}">
+        <div class="col-md-{{ leftCol ?? 1}}">
             {% if article.featuredImage %}
                 <a href="{{ article_show }}">
 

@@ -1,24 +1,17 @@
 
 .gradient-custom-3 {
-    /* fallback for old browsers */
-    background: #84fab0;
-
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
 }
-.gradient-custom-4 {
-    /* fallback for old browsers */
-    background: #84fab0;
+/*.gradient-custom-4 {*/
+/*    !* fallback for old browsers *!*/
+/*    background: #84fab0;*/
 
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+/*    !* Chrome 10-25, Safari 5.1-6 *!*/
+/*    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));*/
 
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
-}
+/*    !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+/*    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))*/
+/*}*/
 /*STYLE DU BOUTON*/
 /*.bn632-hover {*/
 /*    width: 200px;*/
@@ -65,18 +58,22 @@
 
 }
 html {
-    overflow: scroll;
-    overflow-x: hidden;
 
 }
+
+
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0; /* Supprime le scrollbar */
 }
+
+
+
+    /*background: transparent;  !* Optional: just make scrollbar invisible *!*/
+
 /* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #FF0000;*/
+/*}*/
 
 .navbar {
     color: #fff;
@@ -148,8 +145,8 @@ html {
     font-size: 14px;
 }
 .navbar .navbar-nav > a:hover, .navbar .navbar-nav > a:focus {
-    color: #fff;
-    text-shadow: 0 0 4px rgba(255,255,255,0.3);
+    color: #ffffff;
+    text-shadow: 1px 1px 8px rgb(255, 255, 255);
 }
 .navbar .navbar-nav > a > i {
     display: block;
@@ -181,7 +178,7 @@ html {
     font-size: 15px;
 }
 .navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:focus {
-    color: #333 !important;
+    color: #000000 !important;
     background: transparent !important;
 }
 .navbar .navbar-nav .active a, .navbar .navbar-nav .active a:hover, .navbar .navbar-nav .active a:focus {
@@ -219,7 +216,7 @@ html {
         margin-left: 30px;
     }
     .carousel-item > img {
-        height: 90vh
+        height: 92vh
     }
 
 }
@@ -227,9 +224,25 @@ html {
     .navbar .navbar-nav > a > i {
         display: inline-block;
         text-align: left;
-        min-width: 30px;
         position: relative;
         top: 4px;
+        margin-right: 20px;
+        font-size: 40px;
+    }
+    .navbar .navbar-nav > a {
+        font-size: 40px;
+    }
+    .carousel-item > img {
+        height: 93vh;
+        width: 2000px;
+        font-size: 10px;
+    }
+    .carousel-item {
+
+        font-size: 40px;
+    }
+    .carousel-caption {
+        height: 50vh;
     }
     .navbar .navbar-collapse {
         border: none;
@@ -250,5 +263,9 @@ html {
     }
     .input-group {
         width: 100%;
+    }
+
+    .real {
+        margin-bottom: 75vh
     }
 }

@@ -44,6 +44,9 @@
 {#        </div> #}
 {#    </div> #}
 {# </nav> #}
+<style>
+
+</style>
 <nav id="navbar_top" class="navbar navbar-expand-xl navbar-dark bg-dark">
     <a href="{{ path('homepage') }}" class="navbar-brand"><img style="width: 12vh; height: 6vh" src="{{ asset('assets/img/test-removebg-preview.png') }}">
     </a>
@@ -57,25 +60,28 @@
 
         <div class="navbar-nav ml-auto nav-tabs ">
             <a  href="{{ path('homepage') }}" class="nav-item nav-link "><i class="fa fa-home"></i><span>Accueil</span></a>
-            <a  href="{{ path('coiffures') }}" class="nav-item nav-link"><i class="fa-solid fa-scissors"></i><span>Coiffures</span></a>
-            <a  href="{{ path('produits') }}" class="nav-item nav-link"><i class="fa-solid fa-spray-can-sparkles"></i><span>Nos produits</span></a>
+            <a  href="{{ path('coiffures') }}" class="nav-item nav-link"><i class="fa-solid fa-scissors"></i><span>Réalisations</span></a>
             <a  href="{{ path('actualites') }}" class="nav-item nav-link"><i class="fa-regular fa-newspaper"></i><span>Actualités</span></a>
             <a  href="{{ path('contact') }}" class="nav-item nav-link"><i class="fa-regular fa-message"></i><span>Contactez-nous</span></a>
+            <a  href="{{ path('aboutus') }}" class="nav-item nav-link"><i class="fa-solid fa-building"></i><span>A propos de nous</span></a>
+
         </div>
+
 
         {% if app.user %}
 
         <div class="navbar-nav ml-auto dropdown " >
-            <a href="#" data-toggle="dropdown" style="font-family: 'Varela Round', sans-serif;" class="nav-item nav-link dropdown-toggle user-action"><i class="bi bi-person-circle"></i> {{ app.user.email }}<b class="caret"></b></a>
+            <a href="#"
+               data-toggle="dropdown"
+               style="font-family: 'Varela Round', sans-serif;"
+               class="nav-item nav-link dropdown-toggle user-action"><i class="bi bi-person-circle"></i> {{ app.user.email }}<b class="caret"></b></a>
             <div class="dropdown-menu " >
-                <a href="{{ path('profile') }}" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a>
+
                 {% if 'ROLE_ADMIN' in app.user.roles %}
-                <a href="{{ path('admin') }}" style="font-size: 14px" class="dropdown-item"><i class="bi bi-menu-button-wide"></i> Dashboard administrateur</a>
+                <a href="{{ path('admin') }}" style="font-size: 14px" class="dropdown-item"><i class="bi bi-menu-button-wide"></i> Admin Dashboard</a>
                 {% endif %}
                 <a href="{{ path('reservation') }}" class="dropdown-item"><i class="fa fa-calendar-o"></i> Prendre RDV</a>
-                <a href="{{ path('notifications') }}" class="dropdown-item"><i class="fa-regular fa-bell"></i><span> Notifications</span></a>
-                <a href="{{ path('messages') }}" class="dropdown-item"><i class="fa-regular fa-envelope"></i><span> Messages</span></a>
-                <a href="{{ path('parametres') }}" class="dropdown-item"><i class="fa fa-sliders"></i> Paramètres</a>
+
                 <div class="divider dropdown-divider"></div>
                 <a href="{{ path('app_logout') }}" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Se déconnecter</a>
             </div>
