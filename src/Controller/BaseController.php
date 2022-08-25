@@ -69,6 +69,7 @@ class BaseController extends AbstractController
                 ]);
 
             $mailer->send($email);
+
             $envoie = "oui";
             return $this->render('pages/contact.html.twig', [
                 'envoie' => $envoie,

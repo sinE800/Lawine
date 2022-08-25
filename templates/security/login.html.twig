@@ -4,9 +4,7 @@
 
 {% block body %}
     <form method="post">
-        {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+
 
         {% if app.user %}
             <div class="mb-3">
@@ -22,7 +20,9 @@
                             <div class="card" style="border-radius: 15px;">
                                 <div class="card-body p-5" >
                                     <h1 class=" text-center mb-5">Connexion</h1>
-
+                                    {% if error %}
+                                        <div class="alert alert-danger">L'adresse mail et/ou le mot de passe sont invalides.</div>
+                                    {% endif %}
                                     <label for="inputEmail">Adresse mail</label>
                                     <input placeholder="Adresse mail" type="email" value="{{ last_username }}"
                                            name="email" id="inputEmail"

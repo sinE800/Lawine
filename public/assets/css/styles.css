@@ -218,9 +218,12 @@ html {
     .carousel-item > img {
         height: 92vh
     }
-
+    .carousel-item > .carousel-caption > p {
+        font-size: 1.5vh;
+    }
 }
 @media (max-width: 1199px){
+
     .navbar .navbar-nav > a > i {
         display: inline-block;
         text-align: left;
@@ -234,8 +237,7 @@ html {
     }
     .carousel-item > img {
         height: 93vh;
-        width: 2000px;
-        font-size: 10px;
+
     }
     .carousel-item {
 
@@ -268,4 +270,21 @@ html {
     .real {
         margin-bottom: 75vh
     }
+    .carousel-item > .carousel-caption > p {
+        display: none;
+    }
+
+
+    /*.image-accueil-mobile-1{*/
+    /*    content: url("public/assets/img/galerie/image-mobile-1.jpg");*/
+    /*}*/
+    /*.image-accueil-mobile-2{*/
+    /*    content: url("public/assets/img/galerie/image-mobile-2.jpg");*/
+    /*}*/
+    /*.image-accueil-mobile-3{*/
+    /*    content: url("public/assets/img/galerie/image-mobile-3.jpg");*/
+    /*}*/
+
+
+
 }
